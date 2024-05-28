@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4e5e1e7b81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container1">
+            <div class="dark-light_mode">
+                <label class="switch">
+                    <input type="checkbox" id="modeToggle">
+                    <span class="slider"></span>
+                </label>
+                <p>Dark Mode</p>
+            </div>
+            <div class="searchbox">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchbox_input" placeholder="Search for your preferred city...">
+            </div>
+            <div class="currentlocation">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <button class="searchbox_button">Current Location</button>
+            </div>
+        </div>
+    </div>
+    <div id="body1">
+        <div class="container2">
+            <div class="row1">
+                <div class="left_row1">
+                    <div class="location-time">
+                        <h2 id="cityName">City</h2>
+                        <p id="dateTime">Time<br>Date</p>
+                    </div>
+                </div>
+                <div class="right_row1">
+                    <div class="weather-main">
+                        <div class="weather-temp">
+                            <h1 id="temperature">24°C</h1>
+                            <p id="feelsLike">Feels like: 22°C</p>
+                        </div>
+                        <div class="weather-icon-desc">
+                            <img id="weatherIcon" src="" alt="Weather Icon">
+                            <p id="weatherDescription">Sunny</p>
+                        </div>
+                        <div class="weather-details">
+                            <p>Humidity: <span id="humidity">41%</span></p>
+                            <p>Wind Speed: <span id="windSpeed">2km/h</span></p>
+                            <p>Pressure: <span id="pressure">997hPa</span></p>
+                            <p>UV: <span id="uv">8</span></p>
+                            <p>Sunrise: <span id="sunrise">06:37 AM</span></p>
+                            <p>Sunset: <span id="sunset">08:37 PM</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="left_row2">
+                    <h3>5 Days Forecast:</h3>
+                    <div id="fiveDayForecast"></div>
+                </div>
+                <div class="right_row2">
+                    <h3>Hourly Forecast:</h3>
+                    <div id="hourlyForecast"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* Basic styling and dark/light mode switch styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, grey, black);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+}
+
+.container1 {
+    width: 68%;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-light_mode {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.dark-light_mode p {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.searchbox {
+    height: 30px;
+    width: 550px;
+    border-radius: 25px;
+    color: rgba(255, 255, 255, 0.639);
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    background-color: #2c2c2c;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.searchbox_input {
+    border: none;
+    outline: none;
+    height: 100%;
+    background: none;
+    padding-left: 15px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+}
+
+.searchbox_input::placeholder {
+    color: rgba(255, 255, 255, 0.792);
+    font-size: 14px;
+}
+
+.currentlocation {
+    height: 30px;
+    width: 150px;
+    background-color: rgb(0, 211, 0);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.currentlocation .searchbox_button {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+#body1 {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+.container2 {
+    width: 80%;
+    height: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.row1, .row2 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.left_row1, .left_row2, .right_row1, .right_row2 {
+    height: 200px;
+    background-color: #2c2c2c;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+}
+
+.left_row1 {
+    flex: 1 1 35%;
+    margin-right: 30px;
+}
+
+.right_row1 {
+    flex: 1 1 65%;
+}
+
+.left_row2, .right_row2 {
+    flex: 1 1 50%;
+    margin-right: 20px;
+}
+
+.left_row2:last-child, .right_row2:last-child {
+    margin-right: 0;
+}
+
+.location-time {
+    text-align: center;
+}
+
+.weather-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-icon-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon-desc img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.weather-details p {
+    margin: 5px 0;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.forecast-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.light-mode {
+    background-color: #f0f0f0;
+    color: black;
+}
